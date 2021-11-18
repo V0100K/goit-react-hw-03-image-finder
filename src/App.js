@@ -6,7 +6,7 @@ import SearchForm from "./components/Searchbar";
 import ImageGallery from "./components/ImageGallery";
 import Button from "./components/Button";
 import LoaderPreLoader from "./components/Loader";
-import Modal from "./components/Modal";
+import Modal from "./components/Modal/Modal";
 
 class App extends Component {
   state = {
@@ -85,7 +85,7 @@ class App extends Component {
 
         <ImageGallery pictures={pictures} bigImage={this.bigImage} />
         {isLoading && <LoaderPreLoader />}
-        {pictures.length > 11 && !isLoading && (
+        {pictures.length > 0 && !isLoading && (
           <Button onClick={this.fetchPictures} />
         )}
 

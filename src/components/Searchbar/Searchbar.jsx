@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 class SearchForm extends Component {
   state = { query: '' };
@@ -35,7 +35,7 @@ class SearchForm extends Component {
 }
 
 SearchForm.propTypes = {
-  query: PropTypes.string,
+  onSubmit: PropTypes.func,
 };
 
 export default SearchForm;
